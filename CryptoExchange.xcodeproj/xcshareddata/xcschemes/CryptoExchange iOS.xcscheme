@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E6447F3B201521100074E963"
-               BuildableName = ".framework"
+               BuildableName = "CryptoExchange.framework"
                BlueprintName = "CryptoExchange iOS"
                ReferencedContainer = "container:CryptoExchange.xcodeproj">
             </BuildableReference>
@@ -35,7 +35,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E6447F44201521100074E963"
-               BuildableName = ".xctest"
+               BuildableName = "CryptoExchangeTests.xctest"
                BlueprintName = "CryptoExchange iOSTests"
                ReferencedContainer = "container:CryptoExchange.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E6447F3B201521100074E963"
-            BuildableName = ".framework"
+            BuildableName = "CryptoExchange.framework"
             BlueprintName = "CryptoExchange iOS"
             ReferencedContainer = "container:CryptoExchange.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E6447F3B201521100074E963"
-            BuildableName = ".framework"
+            BuildableName = "CryptoExchange.framework"
             BlueprintName = "CryptoExchange iOS"
             ReferencedContainer = "container:CryptoExchange.xcodeproj">
          </BuildableReference>
@@ -86,7 +86,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E6447F3B201521100074E963"
-            BuildableName = ".framework"
+            BuildableName = "CryptoExchange.framework"
             BlueprintName = "CryptoExchange iOS"
             ReferencedContainer = "container:CryptoExchange.xcodeproj">
          </BuildableReference>

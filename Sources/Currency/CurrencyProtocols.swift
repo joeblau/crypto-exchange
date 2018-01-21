@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 protocol Precisionable {
     var scale: Int { get }
 }
@@ -15,4 +16,10 @@ protocol Precisionable {
 protocol Standardizable {
     associatedtype Standard
     var standard: Standard { get }
+}
+
+protocol Currencyable: Precisionable  {
+    var symbol: String { get }
+    var name: String { get }
+    var longName: String { get }
 }

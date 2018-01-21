@@ -240,12 +240,24 @@ extension FiatCurrency: CustomStringConvertible, CustomDebugStringConvertible {
     }
 }
 
-extension FiatCurrency: Precisionable {
+extension FiatCurrency: Currencyable {
     var scale: Int {
         switch self {
         case .clp, .irr, .isk, .jpy, .kpw, .krw, .lak, .lbp, .mkd, .pyg, .vnd: return 0
         case .omr: return 3
         default: return 2
         }
+    }
+
+    public var symbol: String {
+        return self.rawValue
+    }
+
+    public var name: String {
+        return self.description
+    }
+
+    public var longName: String {
+        return "\(self.name) (\(self.symbol))"
     }
 }

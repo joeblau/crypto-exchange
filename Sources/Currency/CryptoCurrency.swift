@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public enum CryptoCurrency: String, EnumCollection {
     case btc   = "BTC"
     case xbt   = "XBT" // Alternate symbol for BTC
@@ -65,19 +64,31 @@ extension CryptoCurrency: Equatable {
     }
 }
 
-extension CryptoCurrency: Precisionable {
-    var scale: Int {
+extension CryptoCurrency: Currencyable {
+    public var scale: Int {
         switch self {
         case .votes: return 10
         case .amm, .qash: return 14
         default: return 8
         }
     }
+
+    public var symbol: String {
+        return self.rawValue
+    }
+
+    public var name: String {
+        return self.description
+    }
+
+    public var longName: String {
+        return "\(self.name) (\(self.symbol))"
+    }
 }
 
 extension CryptoCurrency: Standardizable {
     typealias Standard = CryptoCurrency
-    var standard: CryptoCurrency {
+    public var standard: CryptoCurrency {
         switch self {
         case .btc, .xbt: return CryptoCurrency.btc
         case .miota, .iota, .iot: return CryptoCurrency.miota
@@ -86,5 +97,3 @@ extension CryptoCurrency: Standardizable {
         }
     }
 }
-
-

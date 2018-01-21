@@ -61,5 +61,6 @@ class CryptoCurrencyTests: XCTestCase {
         XCTAssertEqual(CryptoCurrency.votes.scale, 10)
         XCTAssertEqual(CryptoCurrency.qash.scale, 14)
     }
+
 }
 

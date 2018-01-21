@@ -37,9 +37,6 @@
 		E65BE2B420152ADA001F1980 /* FiatCurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65BE2A920152ABA001F1980 /* FiatCurrencyTests.swift */; };
 		E65BE2B520152ADB001F1980 /* CryptoCurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65BE2A820152ABA001F1980 /* CryptoCurrencyTests.swift */; };
 		E65BE2B620152ADB001F1980 /* FiatCurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65BE2A920152ABA001F1980 /* FiatCurrencyTests.swift */; };
-		E65BE2B820152BA0001F1980 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65BE2B720152B9F001F1980 /* Media.xcassets */; };
-		E65BE2B920152BA0001F1980 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65BE2B720152B9F001F1980 /* Media.xcassets */; };
-		E65BE2BA20152BA0001F1980 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65BE2B720152B9F001F1980 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +83,6 @@
 		E65BE29A20152AA9001F1980 /* EnumCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
 		E65BE2A820152ABA001F1980 /* CryptoCurrencyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyTests.swift; sourceTree = "<group>"; };
 		E65BE2A920152ABA001F1980 /* FiatCurrencyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiatCurrencyTests.swift; sourceTree = "<group>"; };
-		E65BE2B720152B9F001F1980 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,10 +159,10 @@
 		E6447F8C201521FB0074E963 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E65BE2C720153CB0001F1980 /* Exchanges */,
 				E65BE29620152AA9001F1980 /* Currency */,
 				E65BE29A20152AA9001F1980 /* EnumCollection.swift */,
 				E6447F3F201521100074E963 /* CryptoExchange.h */,
-				E65BE2B720152B9F001F1980 /* Media.xcassets */,
 				E6019FA72015243B004E73A5 /* Info-iOS.plist */,
 				E6019FAB2015243B004E73A5 /* Info-macOS.plist */,
 				E6019FA82015243B004E73A5 /* Info-tvOS.plist */,
@@ -202,6 +198,13 @@
 				E65BE2A920152ABA001F1980 /* FiatCurrencyTests.swift */,
 			);
 			path = Currency;
+			sourceTree = "<group>";
+		};
+		E65BE2C720153CB0001F1980 /* Exchanges */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Exchanges;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,7 +410,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E65BE2B820152BA0001F1980 /* Media.xcassets in Resources */,
 				E6019FAD2015243F004E73A5 /* Info-iOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,7 +426,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E65BE2B920152BA0001F1980 /* Media.xcassets in Resources */,
 				E6019FB12015244C004E73A5 /* Info-tvOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +442,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E65BE2BA20152BA0001F1980 /* Media.xcassets in Resources */,
 				E6019FAF20152446004E73A5 /* Info-macOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
