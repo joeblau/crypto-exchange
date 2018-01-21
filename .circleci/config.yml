@@ -1,0 +1,39 @@
+# iOS CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/ios-migrating-from-1-2/ for more details
+#
+version: 2
+jobs:
+  build:
+
+    # Specify the Xcode version to use
+    macos:
+      xcode: "9.2.0"
+
+    environment:
+      CODECOV_TOKEN: c7eac6cb-2017-4f88-adfc-7249b0b174a4
+
+    steps:
+      - checkout
+
+      # Build the app and run tests
+      - run:
+          name: Build and run tests
+          command: fastlane scan
+          environment:
+            SCAN_DEVICE: iPhone 6
+            SCAN_SCHEME: CryptoExchange
+
+      # Collect XML test results data to show in the UI,
+      # and save the same XML files under test-results folder
+      # in the Artifacts tab
+      - store_test_results:
+          path: fastlane/test_output/report.junit
+      - store_artifacts:
+          path: fastlane/test_output/report.junit
+          destination: code_coverage/report.junit
+      - store_artifacts:
+          path: ~/Library/Logs/scan
+          destination: scan-logs
+
+      - run: bash <(curl -s https://codecov.io/bash)
