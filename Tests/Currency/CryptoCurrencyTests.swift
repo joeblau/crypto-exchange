@@ -15,8 +15,8 @@ class CryptoCurrencyTests: XCTestCase {
         CryptoCurrency
             .enumerations
             .forEach { (cryptoCurrency) in
-                let debugDescription = CryptoCurrency(rawValue: cryptoCurrency.1)!.debugDescription
-                XCTAssertEqual(debugDescription, cryptoCurrency.0.debugDescription)
+                let longName = CryptoCurrency(rawValue: cryptoCurrency.1)!.longName
+                XCTAssertEqual(longName, "\(cryptoCurrency.0.name) (\(cryptoCurrency.0.symbol))")
         }
     }
 

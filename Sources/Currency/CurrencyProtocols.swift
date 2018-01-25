@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 protocol Precisionable {
     var scale: Int { get }
 }

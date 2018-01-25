@@ -15,8 +15,8 @@ class FiatCurrencyTests: XCTestCase {
         FiatCurrency
             .enumerations
             .forEach { (fiatCurrency) in
-                let debugDescription = FiatCurrency(rawValue: fiatCurrency.1)!.debugDescription
-                XCTAssertEqual(debugDescription, fiatCurrency.0.debugDescription)
+                let longName = FiatCurrency(rawValue: fiatCurrency.1)!.longName
+                XCTAssertEqual(longName, "\(fiatCurrency.0.name) (\(fiatCurrency.0.symbol))")
         }
     }
 

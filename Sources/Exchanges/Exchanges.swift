@@ -7,8 +7,12 @@
 
 import Foundation
 
+protocol ExchangeEnpointable {
+//    var baseURL: URL { get }
+}
+
 protocol CryptocurrencyExchangable {
-    var rate: Int { get }
+    func authenticate(credentials: Credentials)
 }
 
 public struct Exchanges {

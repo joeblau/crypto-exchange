@@ -33,6 +33,10 @@ public enum CryptoCurrency: String, EnumCollection {
 
 extension CryptoCurrency: CustomStringConvertible, CustomDebugStringConvertible {
     public var description: String {
+        return debugDescription
+    }
+
+    public var debugDescription: String {
         switch self {
         case .btc, .xbt:          return "Bitcoin"
         case .bch:                return "Bitcoin Cash"
@@ -51,10 +55,6 @@ extension CryptoCurrency: CustomStringConvertible, CustomDebugStringConvertible 
         case .qash:               return "QASH"
         case .xlm, .str:          return "Stellar"
         }
-    }
-
-    public var debugDescription: String {
-        return description
     }
 }
 

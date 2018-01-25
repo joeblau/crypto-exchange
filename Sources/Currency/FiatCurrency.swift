@@ -122,6 +122,10 @@ public enum FiatCurrency: String, EnumCollection {
 
 extension FiatCurrency: CustomStringConvertible, CustomDebugStringConvertible {
     public var description: String {
+        return debugDescription
+    }
+
+    public var debugDescription: String {
         switch self {
         case .afn: return "Afghanistan Afghani"
         case .all: return "Albania Lek"
@@ -233,10 +237,6 @@ extension FiatCurrency: CustomStringConvertible, CustomDebugStringConvertible {
         case .zar: return "South Africa Rand"
         case .zwd: return "Zimbabwe Dollar"
         }
-    }
-
-    public var debugDescription: String {
-        return description
     }
 }
 

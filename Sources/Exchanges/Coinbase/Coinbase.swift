@@ -7,8 +7,16 @@
 
 import Foundation
 
-public class Coinbase {
+public class Coinbase: CryptocurrencyExchangable {
 
     init() {}
-    
+
+    // MARK: - CryptocurrencyExchangable
+
+    func authenticate(credentials: Credentials) {
+        
+    }
+
+
+
 }
