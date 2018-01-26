@@ -11,7 +11,7 @@ jobs:
       xcode: "9.2.0"
 
     environment:
-      CODECOV_TOKEN: c7eac6cb-2017-4f88-adfc-7249b0b174a4
+      CODECOV_TOKEN: ad71174e-6730-4bdd-bf00-8abd318f84e4
 
     steps:
       - checkout
@@ -22,7 +22,7 @@ jobs:
           command: fastlane scan
           environment:
             SCAN_DEVICE: iPhone 6
-            SCAN_SCHEME: CryptoExchange
+            SCAN_SCHEME: CryptoExchange iOS
 
       # Collect XML test results data to show in the UI,
       # and save the same XML files under test-results folder
