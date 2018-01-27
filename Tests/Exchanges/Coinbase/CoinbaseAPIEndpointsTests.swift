@@ -10,6 +10,16 @@ import XCTest
 
 class CoinbaseAPIEndpointsTests: XCTestCase {
 
+    func testOAuthAuthorize() {
+        let mockURL = Coinbase.oAuthAuthorize
+        XCTAssertEqual(mockURL.absoluteString, "https://www.coinbase.com/oauth/authorize")
+    }
+
+    func testOAuthToken() {
+        let mockURL = Coinbase.oAuthToken
+        XCTAssertEqual(mockURL.absoluteString, "http://www.coinbase.com/oauth/token")
+    }
+
     func testShowUser_forUserId() {
         let mockURL = Coinbase.showUser(userId: "ABC")
         XCTAssertEqual(mockURL.absoluteString, "https://api.coinbase.com/v2/users/ABC")

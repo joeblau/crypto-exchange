@@ -9,9 +9,15 @@ import Foundation
 
 public enum Credentials {
     case keyAuthorization(keyCredentials: KeyCredentials)
+    case oAuth(oAuthCredentials: OAuthCredentials)
 }
 
 public struct KeyCredentials {
-    var apiKey: String?
-    var secretKey: String?
+    var apiKey: String
+    var secretKey: String
+}
+
+public struct OAuthCredentials {
+    var clientId: String
+    var clientSecret: String
 }

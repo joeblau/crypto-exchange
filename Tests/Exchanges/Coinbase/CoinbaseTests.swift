@@ -17,16 +17,54 @@ class CoinbaseTests: XCTestCase {
     }
     
     func testCoinbaseAuthenticate() {
-        let keyCrednetialsMock = KeyCredentials(apiKey: "ABC", secretKey: "DEF")
-        let credentialsMock = Credentials.keyAuthorization(keyCredentials: keyCrednetialsMock)
+        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
+        let credentialsMock = Credentials.oAuth(oAuthCredentials: oAuthCredentialsMock)
 
         let coinbaseMock = Coinbase()
-        coinbaseMock.authenticate(credentials: credentialsMock)
+        let mockURL = coinbaseMock.authenticate(credentials: credentialsMock)
 
-        XCTAssertNotNil(keyCrednetialsMock)
+        XCTAssertNotNil(oAuthCredentialsMock)
         XCTAssertNotNil(credentialsMock)
         XCTAssertNotNil(coinbaseMock)
-
+        XCTAssertNotNil(mockURL)
     }
-    
+
+    func testCoinbaseAuthenticate_incorrect() {
+        let keyCredentialsMock = KeyCredentials(apiKey: "ABC", secretKey: "DEF")
+        let credentialsMock = Credentials.keyAuthorization(keyCredentials: keyCredentialsMock)
+
+        let coinbaseMock = Coinbase()
+        let mockURL = coinbaseMock.authenticate(credentials: credentialsMock)
+
+        XCTAssertNotNil(keyCredentialsMock)
+        XCTAssertNotNil(credentialsMock)
+        XCTAssertNotNil(coinbaseMock)
+        XCTAssertNil(mockURL)
+    }
+
+    func testCoinbaseToken() {
+        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
+        let credentialsMock = Credentials.oAuth(oAuthCredentials: oAuthCredentialsMock)
+
+        let coinbaseMock = Coinbase()
+        let mockURL = coinbaseMock.token(code: "ABC", credentials: credentialsMock)
+
+        XCTAssertNotNil(oAuthCredentialsMock)
+        XCTAssertNotNil(credentialsMock)
+        XCTAssertNotNil(coinbaseMock)
+        XCTAssertNotNil(mockURL)
+    }
+
+    func testCoinbaseToken_incorrect() {
+        let keyCredentialsMock = KeyCredentials(apiKey: "ABC", secretKey: "DEF")
+        let credentialsMock = Credentials.keyAuthorization(keyCredentials: keyCredentialsMock)
+
+        let coinbaseMock = Coinbase()
+        let mockURL = coinbaseMock.token(code: "ABC", credentials: credentialsMock)
+
+        XCTAssertNotNil(keyCredentialsMock)
+        XCTAssertNotNil(credentialsMock)
+        XCTAssertNotNil(coinbaseMock)
+        XCTAssertNil(mockURL)
+    }
 }

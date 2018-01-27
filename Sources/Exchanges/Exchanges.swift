@@ -8,11 +8,11 @@
 import Foundation
 
 protocol ExchangeEnpointable {
-//    var baseURL: URL { get }
 }
 
 protocol CryptocurrencyExchangable {
-    func authenticate(credentials: Credentials)
+    var authorized: Bool { get }
+    func authenticate(credentials: Credentials) -> URL?
 }
 
 public struct Exchanges {
