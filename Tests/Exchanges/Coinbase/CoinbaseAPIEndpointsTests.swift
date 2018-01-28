@@ -10,62 +10,64 @@ import XCTest
 
 class CoinbaseAPIEndpointsTests: XCTestCase {
 
+    let endpoints = CoinbaseAPIEndpoints()
+
     func testOAuthAuthorize() {
-        let mockURL = Coinbase.oAuthAuthorize
+        let mockURL = endpoints.oAuthAuthorize
         XCTAssertEqual(mockURL.absoluteString, "https://www.coinbase.com/oauth/authorize")
     }
 
     func testOAuthToken() {
-        let mockURL = Coinbase.oAuthToken
+        let mockURL = endpoints.oAuthToken
         XCTAssertEqual(mockURL.absoluteString, "http://www.coinbase.com/oauth/token")
     }
 
     func testShowUser_forUserId() {
-        let mockURL = Coinbase.showUser(userId: "ABC")
+        let mockURL = endpoints.showUser(userId: "ABC")
         XCTAssertEqual(mockURL.absoluteString, "https://api.coinbase.com/v2/users/ABC")
     }
 
     func testShowCurrentUser() {
-        let mockURL = Coinbase.showCurrentUser
+        let mockURL = endpoints.showCurrentUser
         XCTAssertEqual(mockURL.absoluteString, "https://api.coinbase.com/v2/user")
     }
 
     func testShowAuthorizationInfo() {
-        let mockURL = Coinbase.showAuthorizationInfo
+        let mockURL = endpoints.showAuthorizationInfo
         XCTAssertEqual(mockURL.absoluteString, "https://api.coinbase.com/v2/user/auth")
     }
 
     func testListAccounts() {
-        let mockURL = Coinbase.listAccounts
+        let mockURL = endpoints.listAccounts
         XCTAssertEqual(mockURL.absoluteString, "https://api.coinbase.com/v2/accounts")
     }
 
     func testShowAccount_forAcocuntId() {
-        let mockURL = Coinbase.showAccount(accountId: "ABC")
+        let mockURL = endpoints.showAccount(accountId: "ABC")
         XCTAssertEqual(mockURL.absoluteString, "https://api.coinbase.com/v2/accounts/ABC")
     }
 
     func testListAccountAddresses_forAcocuntId() {
-        let mockURL = Coinbase.listAccountAddresses(accountId: "ABC")
+        let mockURL = endpoints.listAccountAddresses(accountId: "ABC")
         XCTAssertEqual(mockURL.absoluteString, "https://api.coinbase.com/v2/accounts/ABC/addresses")
     }
     func testShowAccountAddress_forAcocuntId_andAddressId() {
-        let mockURL = Coinbase.showAccountAddress(accountId: "ABC", addressId: "DEF")
+        let mockURL = endpoints.showAccountAddress(accountId: "ABC", addressId: "DEF")
         XCTAssertEqual(mockURL.absoluteString, "https://api.coinbase.com/v2/accounts/ABC/addresses/DEF")
     }
 
     func testListAccountAddressTransactions_forAcocuntId() {
-        let mockURL = Coinbase.listAccountAddressTransactions(accountId: "ABC", addressId: "DEF")
+        let mockURL = endpoints.listAccountAddressTransactions(accountId: "ABC", addressId: "DEF")
         XCTAssertEqual(mockURL.absoluteString, "https://api.coinbase.com/v2/accounts/ABC/addresses/DEF/transactions")
     }
 
     func testListAccountTransactions_forAcocuntId() {
-        let mockURL = Coinbase.listAccountTransactions(accountId: "ABC")
+        let mockURL = endpoints.listAccountTransactions(accountId: "ABC")
         XCTAssertEqual(mockURL.absoluteString, "https://api.coinbase.com/v2/accounts/ABC/transactions")
     }
 
     func testShowAccountTransaction_forAcocuntId_andAddressId() {
-        let mockURL = Coinbase.showAccountTransaction(accountId: "ABC", transactionId: "DEF")
+        let mockURL = endpoints.showAccountTransaction(accountId: "ABC", transactionId: "DEF")
         XCTAssertEqual(mockURL.absoluteString, "https://api.coinbase.com/v2/accounts/ABC/transactions/DEF")
     }
 }

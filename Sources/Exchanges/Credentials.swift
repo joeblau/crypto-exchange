@@ -10,6 +10,7 @@ import Foundation
 public enum Credentials {
     case keyAuthorization(keyCredentials: KeyCredentials)
     case oAuth(oAuthCredentials: OAuthCredentials)
+    case none
 }
 
 public struct KeyCredentials {

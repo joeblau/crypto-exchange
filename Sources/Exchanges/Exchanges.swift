@@ -11,12 +11,10 @@ protocol ExchangeEnpointable {
 }
 
 protocol CryptocurrencyExchangable {
-    var authorized: Bool { get }
-    func authenticate(credentials: Credentials) -> URL?
 }
 
 public struct Exchanges {
-    static var list: [CryptocurrencyExchangable] {
-        return [Coinbase()]
+    static var types: [CryptocurrencyExchangable.Type] {
+        return [Coinbase.self]
     }
 }

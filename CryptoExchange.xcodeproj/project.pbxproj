@@ -17,6 +17,9 @@
 		E6447F4D201521100074E963 /* CryptoExchange.h in Headers */ = {isa = PBXBuildFile; fileRef = E6447F3F201521100074E963 /* CryptoExchange.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6447FB5201522EE0074E963 /* CryptoExchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6447FAC201522EE0074E963 /* CryptoExchange.framework */; };
 		E6447FD1201522FD0074E963 /* CryptoExchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6447FC8201522FD0074E963 /* CryptoExchange.framework */; };
+		E64E28BC201DD58B00682625 /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E28BB201DD58B00682625 /* RequestBuilderTests.swift */; };
+		E64E28BD201DD58B00682625 /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E28BB201DD58B00682625 /* RequestBuilderTests.swift */; };
+		E64E28BE201DD58B00682625 /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E28BB201DD58B00682625 /* RequestBuilderTests.swift */; };
 		E65BE293201528A5001F1980 /* CryptoExchange.h in Headers */ = {isa = PBXBuildFile; fileRef = E6447F3F201521100074E963 /* CryptoExchange.h */; };
 		E65BE294201528A6001F1980 /* CryptoExchange.h in Headers */ = {isa = PBXBuildFile; fileRef = E6447F3F201521100074E963 /* CryptoExchange.h */; };
 		E65BE29B20152AA9001F1980 /* CurrencyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65BE29720152AA9001F1980 /* CurrencyProtocols.swift */; };
@@ -58,12 +61,24 @@
 		E6A3B7D7201C0CD8005B579A /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7D6201C0CD8005B579A /* AccessToken.swift */; };
 		E6A3B7D8201C0CD8005B579A /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7D6201C0CD8005B579A /* AccessToken.swift */; };
 		E6A3B7D9201C0CD8005B579A /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7D6201C0CD8005B579A /* AccessToken.swift */; };
+		E6A3B7DB201C0F54005B579A /* CoinbaseAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7DA201C0F54005B579A /* CoinbaseAccount.swift */; };
+		E6A3B7DC201C0F54005B579A /* CoinbaseAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7DA201C0F54005B579A /* CoinbaseAccount.swift */; };
+		E6A3B7DD201C0F54005B579A /* CoinbaseAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7DA201C0F54005B579A /* CoinbaseAccount.swift */; };
+		E6A3B7DF201C140D005B579A /* URLComponents+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7DE201C140D005B579A /* URLComponents+Extensions.swift */; };
+		E6A3B7E0201C140D005B579A /* URLComponents+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7DE201C140D005B579A /* URLComponents+Extensions.swift */; };
+		E6A3B7E1201C140D005B579A /* URLComponents+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7DE201C140D005B579A /* URLComponents+Extensions.swift */; };
+		E6A3B7E8201C1489005B579A /* URLComponents+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7E7201C1489005B579A /* URLComponents+ExtensionsTests.swift */; };
+		E6A3B7E9201C1489005B579A /* URLComponents+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7E7201C1489005B579A /* URLComponents+ExtensionsTests.swift */; };
+		E6A3B7EA201C1489005B579A /* URLComponents+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A3B7E7201C1489005B579A /* URLComponents+ExtensionsTests.swift */; };
 		E6B0BD05201A9ED5004758EB /* CoinbaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BD04201A9ED5004758EB /* CoinbaseTests.swift */; };
 		E6B0BD06201A9ED5004758EB /* CoinbaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BD04201A9ED5004758EB /* CoinbaseTests.swift */; };
 		E6B0BD07201A9ED5004758EB /* CoinbaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BD04201A9ED5004758EB /* CoinbaseTests.swift */; };
 		E6B0BD0A201A9FE0004758EB /* ExchangesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BD09201A9FE0004758EB /* ExchangesTests.swift */; };
 		E6B0BD0B201A9FE0004758EB /* ExchangesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BD09201A9FE0004758EB /* ExchangesTests.swift */; };
 		E6B0BD0C201A9FE0004758EB /* ExchangesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BD09201A9FE0004758EB /* ExchangesTests.swift */; };
+		E6B5B686201CF9820091D002 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5B685201CF9820091D002 /* RequestBuilder.swift */; };
+		E6B5B687201CF9820091D002 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5B685201CF9820091D002 /* RequestBuilder.swift */; };
+		E6B5B688201CF9820091D002 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B5B685201CF9820091D002 /* RequestBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +119,7 @@
 		E6447FB4201522EE0074E963 /* CryptoExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoExchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6447FC8201522FD0074E963 /* CryptoExchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoExchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6447FD0201522FD0074E963 /* CryptoExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoExchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E64E28BB201DD58B00682625 /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
 		E65BE29720152AA9001F1980 /* CurrencyProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyProtocols.swift; sourceTree = "<group>"; };
 		E65BE29820152AA9001F1980 /* FiatCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiatCurrency.swift; sourceTree = "<group>"; };
 		E65BE29920152AA9001F1980 /* CryptoCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
@@ -117,8 +133,12 @@
 		E66AE5592015743B0007E381 /* CoinbaseAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseAPIEndpoints.swift; sourceTree = "<group>"; };
 		E66AE5602017720A0007E381 /* CoinbaseAPIEndpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseAPIEndpointsTests.swift; sourceTree = "<group>"; };
 		E6A3B7D6201C0CD8005B579A /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		E6A3B7DA201C0F54005B579A /* CoinbaseAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseAccount.swift; sourceTree = "<group>"; };
+		E6A3B7DE201C140D005B579A /* URLComponents+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Extensions.swift"; sourceTree = "<group>"; };
+		E6A3B7E7201C1489005B579A /* URLComponents+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		E6B0BD04201A9ED5004758EB /* CoinbaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseTests.swift; sourceTree = "<group>"; };
 		E6B0BD09201A9FE0004758EB /* ExchangesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesTests.swift; sourceTree = "<group>"; };
+		E6B5B685201CF9820091D002 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +230,7 @@
 		E65BE295201529C8001F1980 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E6A3B7E2201C1455005B579A /* Networking */,
 				E66AE55E201771D90007E381 /* Exchanges */,
 				E65BE2A720152ABA001F1980 /* Currency */,
 				E6019FAA2015243B004E73A5 /* Info-iOSTests.plist */,
@@ -263,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				E6A3B7D6201C0CD8005B579A /* AccessToken.swift */,
+				E6A3B7DA201C0F54005B579A /* CoinbaseAccount.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,9 +307,20 @@
 			path = Coinbase;
 			sourceTree = "<group>";
 		};
+		E6A3B7E2201C1455005B579A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E6A3B7E7201C1489005B579A /* URLComponents+ExtensionsTests.swift */,
+				E64E28BB201DD58B00682625 /* RequestBuilderTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		E6B0BD33201AD293004758EB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E6A3B7DE201C140D005B579A /* URLComponents+Extensions.swift */,
+				E6B5B685201CF9820091D002 /* RequestBuilder.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -547,7 +580,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65BE2A420152AA9001F1980 /* EnumCollection.swift in Sources */,
+				E6A3B7DF201C140D005B579A /* URLComponents+Extensions.swift in Sources */,
 				E66AE54A2015455B0007E381 /* ExchangeRate.swift in Sources */,
+				E6B5B686201CF9820091D002 /* RequestBuilder.swift in Sources */,
 				E66AE556201573D10007E381 /* Credentials.swift in Sources */,
 				E65BE29E20152AA9001F1980 /* FiatCurrency.swift in Sources */,
 				E66AE55A2015743B0007E381 /* CoinbaseAPIEndpoints.swift in Sources */,
@@ -555,6 +590,7 @@
 				E66AE5522015457C0007E381 /* Exchanges.swift in Sources */,
 				E65BE2A120152AA9001F1980 /* CryptoCurrency.swift in Sources */,
 				E65BE29B20152AA9001F1980 /* CurrencyProtocols.swift in Sources */,
+				E6A3B7DB201C0F54005B579A /* CoinbaseAccount.swift in Sources */,
 				E6A3B7D7201C0CD8005B579A /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,11 +599,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E64E28BC201DD58B00682625 /* RequestBuilderTests.swift in Sources */,
 				E65BE2B220152AD9001F1980 /* FiatCurrencyTests.swift in Sources */,
 				E6B0BD0A201A9FE0004758EB /* ExchangesTests.swift in Sources */,
 				E6B0BD05201A9ED5004758EB /* CoinbaseTests.swift in Sources */,
 				E65BE2B120152AD9001F1980 /* CryptoCurrencyTests.swift in Sources */,
 				E66AE5612017720A0007E381 /* CoinbaseAPIEndpointsTests.swift in Sources */,
+				E6A3B7E8201C1489005B579A /* URLComponents+ExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +614,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65BE2A520152AA9001F1980 /* EnumCollection.swift in Sources */,
+				E6A3B7E0201C140D005B579A /* URLComponents+Extensions.swift in Sources */,
 				E66AE54B2015455B0007E381 /* ExchangeRate.swift in Sources */,
+				E6B5B687201CF9820091D002 /* RequestBuilder.swift in Sources */,
 				E66AE557201573D10007E381 /* Credentials.swift in Sources */,
 				E65BE29F20152AA9001F1980 /* FiatCurrency.swift in Sources */,
 				E66AE55B2015743B0007E381 /* CoinbaseAPIEndpoints.swift in Sources */,
@@ -584,6 +624,7 @@
 				E66AE5532015457C0007E381 /* Exchanges.swift in Sources */,
 				E65BE2A220152AA9001F1980 /* CryptoCurrency.swift in Sources */,
 				E65BE29C20152AA9001F1980 /* CurrencyProtocols.swift in Sources */,
+				E6A3B7DC201C0F54005B579A /* CoinbaseAccount.swift in Sources */,
 				E6A3B7D8201C0CD8005B579A /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,11 +633,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E64E28BD201DD58B00682625 /* RequestBuilderTests.swift in Sources */,
 				E65BE2B420152ADA001F1980 /* FiatCurrencyTests.swift in Sources */,
 				E6B0BD0B201A9FE0004758EB /* ExchangesTests.swift in Sources */,
 				E6B0BD06201A9ED5004758EB /* CoinbaseTests.swift in Sources */,
 				E65BE2B320152ADA001F1980 /* CryptoCurrencyTests.swift in Sources */,
 				E66AE5622017720A0007E381 /* CoinbaseAPIEndpointsTests.swift in Sources */,
+				E6A3B7E9201C1489005B579A /* URLComponents+ExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +648,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65BE2A620152AA9001F1980 /* EnumCollection.swift in Sources */,
+				E6A3B7E1201C140D005B579A /* URLComponents+Extensions.swift in Sources */,
 				E66AE54C2015455B0007E381 /* ExchangeRate.swift in Sources */,
+				E6B5B688201CF9820091D002 /* RequestBuilder.swift in Sources */,
 				E66AE558201573D10007E381 /* Credentials.swift in Sources */,
 				E65BE2A020152AA9001F1980 /* FiatCurrency.swift in Sources */,
 				E66AE55C2015743B0007E381 /* CoinbaseAPIEndpoints.swift in Sources */,
@@ -613,6 +658,7 @@
 				E66AE5542015457C0007E381 /* Exchanges.swift in Sources */,
 				E65BE2A320152AA9001F1980 /* CryptoCurrency.swift in Sources */,
 				E65BE29D20152AA9001F1980 /* CurrencyProtocols.swift in Sources */,
+				E6A3B7DD201C0F54005B579A /* CoinbaseAccount.swift in Sources */,
 				E6A3B7D9201C0CD8005B579A /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,11 +667,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E64E28BE201DD58B00682625 /* RequestBuilderTests.swift in Sources */,
 				E65BE2B620152ADB001F1980 /* FiatCurrencyTests.swift in Sources */,
 				E6B0BD0C201A9FE0004758EB /* ExchangesTests.swift in Sources */,
 				E6B0BD07201A9ED5004758EB /* CoinbaseTests.swift in Sources */,
 				E65BE2B520152ADB001F1980 /* CryptoCurrencyTests.swift in Sources */,
 				E66AE5632017720A0007E381 /* CoinbaseAPIEndpointsTests.swift in Sources */,
+				E6A3B7EA201C1489005B579A /* URLComponents+ExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

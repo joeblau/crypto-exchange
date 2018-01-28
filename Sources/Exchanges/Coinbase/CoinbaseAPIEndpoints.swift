@@ -7,40 +7,46 @@
 
 import Foundation
 
-internal extension Coinbase {
+public protocol APIEndpointable {
+    var oAuthAuthorize: URL { get }
+    var oAuthToken: URL { get }
+    var listAccounts: URL { get }
+}
+
+public struct CoinbaseAPIEndpoints: APIEndpointable {
 
     // Authenticate
-    internal static var oAuthAuthorize = "https://www.coinbase.com/oauth/authorize".toURL
-    internal static var oAuthToken = "http://www.coinbase.com/oauth/token".toURL
+    public var oAuthAuthorize = "https://www.coinbase.com/oauth/authorize".toURL
+    public var oAuthToken = "http://www.coinbase.com/oauth/token".toURL
 
     // Users
-    internal static func showUser(userId: String) -> URL {
+    public func showUser(userId: String) -> URL {
         return "https://api.coinbase.com/v2/users/\(userId)".toURL
     }
-    internal static var showCurrentUser = "https://api.coinbase.com/v2/user".toURL
-    internal static var showAuthorizationInfo = "https://api.coinbase.com/v2/user/auth".toURL
+    public var showCurrentUser = "https://api.coinbase.com/v2/user".toURL
+    public var showAuthorizationInfo = "https://api.coinbase.com/v2/user/auth".toURL
 
     // Accounts
-    internal static var listAccounts = "https://api.coinbase.com/v2/accounts".toURL
-    internal static func showAccount(accountId: String) -> URL {
+    public var listAccounts = "https://api.coinbase.com/v2/accounts".toURL
+    public func showAccount(accountId: String) -> URL {
         return "https://api.coinbase.com/v2/accounts/\(accountId)".toURL
     }
-    internal static func listAccountAddresses(accountId: String) -> URL {
+    public func listAccountAddresses(accountId: String) -> URL {
         return "https://api.coinbase.com/v2/accounts/\(accountId)/addresses".toURL
     }
-    internal static func showAccountAddress(accountId: String, addressId: String) -> URL {
+    public func showAccountAddress(accountId: String, addressId: String) -> URL {
         return "https://api.coinbase.com/v2/accounts/\(accountId)/addresses/\(addressId)".toURL
     }
-    internal static func listAccountAddressTransactions(accountId: String, addressId: String) -> URL {
+    public func listAccountAddressTransactions(accountId: String, addressId: String) -> URL {
         return "https://api.coinbase.com/v2/accounts/\(accountId)/addresses/\(addressId)/transactions".toURL
     }
 
     // Transactions
 
-    internal static func listAccountTransactions(accountId: String) -> URL {
+    public func listAccountTransactions(accountId: String) -> URL {
         return "https://api.coinbase.com/v2/accounts/\(accountId)/transactions".toURL
     }
-    internal static func showAccountTransaction(accountId: String, transactionId: String) -> URL {
+    public func showAccountTransaction(accountId: String, transactionId: String) -> URL {
         return "https://api.coinbase.com/v2/accounts/\(accountId)/transactions/\(transactionId)".toURL
     }
 }

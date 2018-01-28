@@ -11,7 +11,7 @@ import XCTest
 class ExchangesTests: XCTestCase {
     
     func testExchangesList_count() {
-        XCTAssertEqual(Exchanges.list.count, 1)
+        XCTAssertEqual(Exchanges.types.count, 1)
     }
 
 }
