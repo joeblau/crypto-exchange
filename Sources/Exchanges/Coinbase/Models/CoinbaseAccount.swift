@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct CoinbaseAccounts: Codable {
+public struct CoinbaseAccounts: Codable {
     var data: [CoinbaseAccount]?
 }
 
-struct CoinbaseAccount: Codable {
+public struct CoinbaseAccount: Codable {
     var id: UUID
     var name: String
     var type: String
@@ -19,7 +19,7 @@ struct CoinbaseAccount: Codable {
     var balance: CoinbaseBalance
 }
 
-struct CoinbaseBalance: Codable {
+public struct CoinbaseBalance: Codable {
     var amount: String
     var currency: String
 }

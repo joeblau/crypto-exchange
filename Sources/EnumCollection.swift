@@ -24,6 +24,5 @@ extension EnumCollection where Self: Hashable, Self: RawRepresentable {
             }
         }
     }
-
 }
 // codebeat:enable[BLOCK_NESTING]

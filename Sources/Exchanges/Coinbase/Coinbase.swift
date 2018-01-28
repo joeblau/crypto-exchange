@@ -22,18 +22,18 @@ public class Coinbase: CryptocurrencyExchangable {
         apiEndpoints = apiEndpointable
     }
 
-    func authenticate() -> URL? {
+    public func authenticate() -> URL? {
         return URLComponents(url: apiEndpoints.oAuthAuthorize, resolvingAgainstBaseURL: false)?
             .authenticate(oAuthCredentials: oAuthCredentials)
     }
 
-    func token(code: String) -> URL? {
+    public func token(code: String) -> URL? {
         return URLComponents(url: apiEndpoints.oAuthToken, resolvingAgainstBaseURL: false)?
             .token(code: code, oAuthCredentials: oAuthCredentials)
 
     }
 
-    func getAccountBalances(completion: @escaping (_ accounts:  [CoinbaseAccount]?) -> ()) {
+    public func getAccountBalances(completion: @escaping (_ accounts:  [CoinbaseAccount]?) -> ()) {
         let urlComponents = URLComponents(url: apiEndpoints.listAccounts, resolvingAgainstBaseURL: false)
         do {
             let request = try requestBuilder.build(urlComponents: urlComponents, httpMethod: .get, requestEncoding: .json, queryItems: nil)
@@ -48,7 +48,7 @@ public class Coinbase: CryptocurrencyExchangable {
 
     // MARK: - Private
 
-    func jsonDecodeAccounts(data: Data?) -> CoinbaseAccounts? {
+    fileprivate func jsonDecodeAccounts(data: Data?) -> CoinbaseAccounts? {
         guard let data = data else { return nil }
         return try? jsonDecoder.decode(CoinbaseAccounts.self, from: data)
     }
