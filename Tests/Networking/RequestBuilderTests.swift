@@ -64,14 +64,13 @@ class RequestBuilderTests: XCTestCase {
         let expectResponse = expectation(description: "successful response")
 
         let task = requestBuilderMock.execute(request: urlRequestMock, completion: { (data, response, error) in
+            XCTAssertNotNil(data)
+            XCTAssertNil(error)
             expectResponse.fulfill()
         })
 
         waitForExpectations(timeout: 5) { error in
             task.cancel()
-            if let error = error {
-                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
-            }
         }
     }
 
@@ -82,14 +81,13 @@ class RequestBuilderTests: XCTestCase {
         let expectResponse = expectation(description: "failed response")
 
         let task = requestBuilderMock.execute(request: urlRequestMock, completion: { (data, response, error) in
+            XCTAssertNil(data)
+            XCTAssertNotNil(error)
             expectResponse.fulfill()
         })
 
         waitForExpectations(timeout: 5) { error in
             task.cancel()
-            if let error = error {
-                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
-            }
         }
     }
 }

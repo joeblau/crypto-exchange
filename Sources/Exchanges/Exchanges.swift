@@ -7,11 +7,9 @@
 
 import Foundation
 
-protocol ExchangeEnpointable {
-}
+protocol ExchangeEnpointable {}
 
-protocol CryptocurrencyExchangable {
-}
+protocol CryptocurrencyExchangable {}
 
 public struct Exchanges {
     static var types: [CryptocurrencyExchangable.Type] {

@@ -120,6 +120,7 @@ public enum FiatCurrency: String, EnumCollection {
     case zwd   = "ZWD"
 }
 
+// codebeat:disable[CYCLO,ABC]
 extension FiatCurrency: CustomStringConvertible, CustomDebugStringConvertible {
     public var description: String {
         return debugDescription
@@ -239,6 +240,7 @@ extension FiatCurrency: CustomStringConvertible, CustomDebugStringConvertible {
         }
     }
 }
+// codebeat:enable[CYCLO,ABC]
 
 extension FiatCurrency: Currencyable {
     var scale: Int {

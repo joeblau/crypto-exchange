@@ -83,13 +83,6 @@ public class RequestBuilder: RequestBuildable {
                         queue: DispatchQueue = DispatchQueue.main,
                         completion: ((_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void)? = nil) -> URLSessionTask {
         let task = urlSession.dataTask(with: request) { data, response, error in
-            if let error = error {
-                queue.async {
-                    completion?(nil, response, error)
-                }
-                return
-            }
-
             queue.async {
                 completion?(data, response, error)
             }

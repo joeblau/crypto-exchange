@@ -13,7 +13,7 @@ class URLComponents_ExtensionsTests: XCTestCase {
     func testCoinbaseAuthenticate() {
         let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
 
-        var urlComponentsMock = URLComponents(url: URL(string: "http://www.com")!, resolvingAgainstBaseURL: false)
+        let urlComponentsMock = URLComponents(url: URL(string: "http://www.com")!, resolvingAgainstBaseURL: false)
         let mockURL = urlComponentsMock?.authenticate(oAuthCredentials: oAuthCredentialsMock)
 
         XCTAssertNotNil(oAuthCredentialsMock)
@@ -24,7 +24,7 @@ class URLComponents_ExtensionsTests: XCTestCase {
     func testCoinbaseToken() {
         let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
 
-        var urlComponentsMock = URLComponents(url: URL(string: "http://www.com")!, resolvingAgainstBaseURL: false)
+        let urlComponentsMock = URLComponents(url: URL(string: "http://www.com")!, resolvingAgainstBaseURL: false)
         let mockURL = urlComponentsMock?.token(code: "XYZ", oAuthCredentials: oAuthCredentialsMock)
 
         XCTAssertNotNil(oAuthCredentialsMock)

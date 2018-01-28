@@ -31,6 +31,7 @@ public enum CryptoCurrency: String, EnumCollection {
     case str   = "STR" // Alternate symbol for XLM
 }
 
+// codebeat:disable[CYCLO,ABC]
 extension CryptoCurrency: CustomStringConvertible, CustomDebugStringConvertible {
     public var description: String {
         return debugDescription
@@ -57,6 +58,7 @@ extension CryptoCurrency: CustomStringConvertible, CustomDebugStringConvertible 
         }
     }
 }
+// codebeat:enable[CYCLO,ABC]
 
 extension CryptoCurrency: Equatable {
     public static func ==(lhs: CryptoCurrency, rhs: CryptoCurrency) -> Bool {

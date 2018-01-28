@@ -38,20 +38,19 @@ public class Coinbase: CryptocurrencyExchangable {
         do {
             let request = try requestBuilder.build(urlComponents: urlComponents, httpMethod: .get, requestEncoding: .json, queryItems: nil)
             _ = requestBuilder.execute(request: request, queue: DispatchQueue.main, completion: { (data, response, error) in
-                guard let data = data else { completion(nil); return }
-
-                do {
-                    let coinbaseAccounts = try self.jsonDecoder.decode(CoinbaseAccounts.self, from: data)
-                    completion(coinbaseAccounts.data)
-                } catch {
-                    debugPrint(error)
-                    completion(nil)
-                }
+                completion(self.jsonDecodeAccounts(data: data)?.data)
             })
         } catch {
             debugPrint(error)
             completion(nil)
         }
+    }
+
+    // MARK: - Private
+
+    func jsonDecodeAccounts(data: Data?) -> CoinbaseAccounts? {
+        guard let data = data else { return nil }
+        return try? jsonDecoder.decode(CoinbaseAccounts.self, from: data)
     }
 
 }

@@ -114,9 +114,6 @@ class CoinbaseTests: XCTestCase {
         }
 
         waitForExpectations(timeout: 5) { error in
-            if let error = error {
-                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
-            }
         }
     }
 
@@ -177,9 +174,6 @@ class CoinbaseTests: XCTestCase {
         }
 
         waitForExpectations(timeout: 5) { error in
-            if let error = error {
-                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
-            }
         }
     }
 
@@ -209,9 +203,6 @@ class CoinbaseTests: XCTestCase {
         }
 
         waitForExpectations(timeout: 5) { error in
-            if let error = error {
-                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
-            }
         }
     }
 
@@ -228,22 +219,26 @@ class CoinbaseTests: XCTestCase {
         }
 
         let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
+        let urlReeuestMock = URLRequest(url: URL(string: "https://www.cryptostream.com")!)
+        let requestBuilderMock = RequestBuilderMock()
 
         let coinbaseMock = Coinbase(credentials: oAuthCredentialsMock,
-                                    requestBuildable: RequestBuilderMock(),
+                                    requestBuildable: requestBuilderMock,
                                     apiEndpointable: CoinbaseAPIEndpoints())
 
         let expectResponse = expectation(description: "get account balances")
 
         coinbaseMock.getAccountBalances { (mockCoinbaseAccounts) in
             XCTAssertNil(mockCoinbaseAccounts)
+            _ = requestBuilderMock.execute(request: urlReeuestMock, queue: DispatchQueue.main, completion: { (data, response, error) in
+                XCTAssertNil(data)
+                XCTAssertNil(response)
+                XCTAssertNil(error)
+            })
             expectResponse.fulfill()
         }
 
         waitForExpectations(timeout: 5) { error in
-            if let error = error {
-                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
-            }
         }
     }
 
