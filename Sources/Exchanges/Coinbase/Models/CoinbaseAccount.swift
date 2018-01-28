@@ -8,18 +8,18 @@
 import Foundation
 
 public struct CoinbaseAccounts: Codable {
-    var data: [CoinbaseAccount]?
+    public var data: [CoinbaseAccount]?
 }
 
 public struct CoinbaseAccount: Codable {
-    var id: UUID
-    var name: String
-    var type: String
-    var currency: String
-    var balance: CoinbaseBalance
+    public var id: UUID
+    public var name: String
+    public var type: String
+    public var currency: String
+    public var balance: CoinbaseBalance
 }
 
 public struct CoinbaseBalance: Codable {
-    var amount: String
-    var currency: String
+    public var amount: String
+    public var currency: String
 }

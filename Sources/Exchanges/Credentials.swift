@@ -14,11 +14,21 @@ public enum Credentials {
 }
 
 public struct KeyCredentials {
-    var apiKey: String
-    var secretKey: String
+    public var apiKey: String
+    public var secretKey: String
+
+    public init(apiKey: String, secretKey: String) {
+        self.apiKey = apiKey
+        self.secretKey = secretKey
+    }
 }
 
 public struct OAuthCredentials {
-    var clientId: String
-    var clientSecret: String
+    public var clientId: String
+    public var clientSecret: String
+
+    public init(clientId: String, clientSecret: String) {
+        self.clientId = clientId
+        self.clientSecret = clientSecret
+    }
 }

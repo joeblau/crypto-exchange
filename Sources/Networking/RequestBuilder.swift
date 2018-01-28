@@ -58,6 +58,8 @@ public class RequestBuilder: RequestBuildable {
     private let urlSession = URLSession.shared
     private let timeoutInterval: TimeInterval = 10
 
+    public init() {}
+
     public func build(urlComponents: URLComponents?,
                       httpMethod: HTTPMethod = .get,
                       requestEncoding: RequestEncoding? = nil,

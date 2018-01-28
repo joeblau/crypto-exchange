@@ -15,6 +15,8 @@ public protocol APIEndpointable {
 
 public struct CoinbaseAPIEndpoints: APIEndpointable {
 
+    public init() {}
+
     // Authenticate
     public var oAuthAuthorize = "https://www.coinbase.com/oauth/authorize".toURL
     public var oAuthToken = "http://www.coinbase.com/oauth/token".toURL
