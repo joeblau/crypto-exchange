@@ -11,7 +11,7 @@ import XCTest
 class CoinbaseTests: XCTestCase {
     
     func testInit() {
-        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
+        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF", redirectURI: CryptoExchange.coinbaseOAuth2RedirectURI)
         let requestBuilderMock = RequestBuilder()
 
         let coinbaseMock = Coinbase(credentials: oAuthCredentialsMock,
@@ -21,7 +21,7 @@ class CoinbaseTests: XCTestCase {
     }
 
     func testAuthenticationURL() {
-        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
+        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF", redirectURI: CryptoExchange.coinbaseOAuth2RedirectURI)
         let requestBuilderMock = RequestBuilder()
 
         let coinbaseMock = Coinbase(credentials: oAuthCredentialsMock,
@@ -32,7 +32,7 @@ class CoinbaseTests: XCTestCase {
     }
 
     func testTokenURL() {
-        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
+        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF", redirectURI: CryptoExchange.coinbaseOAuth2RedirectURI)
         let requestBuilderMock = RequestBuilder()
 
         let coinbaseMock = Coinbase(credentials: oAuthCredentialsMock,
@@ -100,7 +100,7 @@ class CoinbaseTests: XCTestCase {
             }
         }
 
-        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
+        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF", redirectURI: CryptoExchange.coinbaseOAuth2RedirectURI)
 
         let coinbaseMock = Coinbase(credentials: oAuthCredentialsMock,
                                     requestBuildable: RequestBuilderMock(),
@@ -160,7 +160,7 @@ class CoinbaseTests: XCTestCase {
             }
         }
 
-        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
+        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF", redirectURI: CryptoExchange.coinbaseOAuth2RedirectURI)
 
         let coinbaseMock = Coinbase(credentials: oAuthCredentialsMock,
                                     requestBuildable: RequestBuilderMock(),
@@ -179,7 +179,7 @@ class CoinbaseTests: XCTestCase {
 
     func testGetAccountBalances_failed_notData() {
         class RequestBuilderMock: RequestBuildable {
-            func build(urlComponents: URLComponents?, httpMethod: HTTPMethod, requestEncoding: RequestEncoding?, queryItems: [URLQueryItem]?) throws -> URLRequest {
+            func build(urlComponents: URLComponents?, httpMethod: HTTPMethod, requestEncoding: RequestEncoding?, queryItems: [URLQueryItem]?, headers: [(httpHeaderField: String, value: String)]?) throws -> URLRequest {
                 return URLRequest(url: URL(string: "https://www.cryptostream.com")!)
             }
 
@@ -189,7 +189,7 @@ class CoinbaseTests: XCTestCase {
             }
         }
 
-        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
+        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF", redirectURI: CryptoExchange.coinbaseOAuth2RedirectURI)
 
         let coinbaseMock = Coinbase(credentials: oAuthCredentialsMock,
                                     requestBuildable: RequestBuilderMock(),
@@ -218,7 +218,7 @@ class CoinbaseTests: XCTestCase {
             }
         }
 
-        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF")
+        let oAuthCredentialsMock = OAuthCredentials(clientId: "ABC", clientSecret: "DEF", redirectURI: CryptoExchange.coinbaseOAuth2RedirectURI)
         let urlReeuestMock = URLRequest(url: URL(string: "https://www.cryptostream.com")!)
         let requestBuilderMock = RequestBuilderMock()
 

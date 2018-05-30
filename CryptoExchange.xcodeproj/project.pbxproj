@@ -13,6 +13,9 @@
 		E6019FB020152449004E73A5 /* Info-macOSTests.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6019FAC2015243B004E73A5 /* Info-macOSTests.plist */; };
 		E6019FB12015244C004E73A5 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6019FA82015243B004E73A5 /* Info-tvOS.plist */; };
 		E6019FB220152450004E73A5 /* Info-tvOSTests.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6019FA92015243B004E73A5 /* Info-tvOSTests.plist */; };
+		E61C27D720BEB3E200BCDD5F /* CoinbaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C27D620BEB3E200BCDD5F /* CoinbaseConstants.swift */; };
+		E61C27D820BEB3E200BCDD5F /* CoinbaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C27D620BEB3E200BCDD5F /* CoinbaseConstants.swift */; };
+		E61C27D920BEB3E200BCDD5F /* CoinbaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C27D620BEB3E200BCDD5F /* CoinbaseConstants.swift */; };
 		E6447F46201521100074E963 /* CryptoExchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6447F3C201521100074E963 /* CryptoExchange.framework */; };
 		E6447F4D201521100074E963 /* CryptoExchange.h in Headers */ = {isa = PBXBuildFile; fileRef = E6447F3F201521100074E963 /* CryptoExchange.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6447FB5201522EE0074E963 /* CryptoExchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6447FAC201522EE0074E963 /* CryptoExchange.framework */; };
@@ -20,8 +23,8 @@
 		E64E28BC201DD58B00682625 /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E28BB201DD58B00682625 /* RequestBuilderTests.swift */; };
 		E64E28BD201DD58B00682625 /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E28BB201DD58B00682625 /* RequestBuilderTests.swift */; };
 		E64E28BE201DD58B00682625 /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E28BB201DD58B00682625 /* RequestBuilderTests.swift */; };
-		E65BE293201528A5001F1980 /* CryptoExchange.h in Headers */ = {isa = PBXBuildFile; fileRef = E6447F3F201521100074E963 /* CryptoExchange.h */; };
-		E65BE294201528A6001F1980 /* CryptoExchange.h in Headers */ = {isa = PBXBuildFile; fileRef = E6447F3F201521100074E963 /* CryptoExchange.h */; };
+		E65BE293201528A5001F1980 /* CryptoExchange.h in Headers */ = {isa = PBXBuildFile; fileRef = E6447F3F201521100074E963 /* CryptoExchange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E65BE294201528A6001F1980 /* CryptoExchange.h in Headers */ = {isa = PBXBuildFile; fileRef = E6447F3F201521100074E963 /* CryptoExchange.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E65BE29B20152AA9001F1980 /* CurrencyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65BE29720152AA9001F1980 /* CurrencyProtocols.swift */; };
 		E65BE29C20152AA9001F1980 /* CurrencyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65BE29720152AA9001F1980 /* CurrencyProtocols.swift */; };
 		E65BE29D20152AA9001F1980 /* CurrencyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65BE29720152AA9001F1980 /* CurrencyProtocols.swift */; };
@@ -112,6 +115,7 @@
 		E6019FAA2015243B004E73A5 /* Info-iOSTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOSTests.plist"; sourceTree = "<group>"; };
 		E6019FAB2015243B004E73A5 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		E6019FAC2015243B004E73A5 /* Info-macOSTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOSTests.plist"; sourceTree = "<group>"; };
+		E61C27D620BEB3E200BCDD5F /* CoinbaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseConstants.swift; sourceTree = "<group>"; };
 		E6447F3C201521100074E963 /* CryptoExchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoExchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6447F3F201521100074E963 /* CryptoExchange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoExchange.h; sourceTree = "<group>"; };
 		E6447F45201521100074E963 /* CryptoExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoExchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,6 +289,7 @@
 			children = (
 				E6A3B7D6201C0CD8005B579A /* AccessToken.swift */,
 				E6A3B7DA201C0F54005B579A /* CoinbaseAccount.swift */,
+				E61C27D620BEB3E200BCDD5F /* CoinbaseConstants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -592,6 +597,7 @@
 				E65BE29B20152AA9001F1980 /* CurrencyProtocols.swift in Sources */,
 				E6A3B7DB201C0F54005B579A /* CoinbaseAccount.swift in Sources */,
 				E6A3B7D7201C0CD8005B579A /* AccessToken.swift in Sources */,
+				E61C27D720BEB3E200BCDD5F /* CoinbaseConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +632,7 @@
 				E65BE29C20152AA9001F1980 /* CurrencyProtocols.swift in Sources */,
 				E6A3B7DC201C0F54005B579A /* CoinbaseAccount.swift in Sources */,
 				E6A3B7D8201C0CD8005B579A /* AccessToken.swift in Sources */,
+				E61C27D820BEB3E200BCDD5F /* CoinbaseConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +667,7 @@
 				E65BE29D20152AA9001F1980 /* CurrencyProtocols.swift in Sources */,
 				E6A3B7DD201C0F54005B579A /* CoinbaseAccount.swift in Sources */,
 				E6A3B7D9201C0CD8005B579A /* AccessToken.swift in Sources */,
+				E61C27D920BEB3E200BCDD5F /* CoinbaseConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1263,13 +1271,14 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1298,6 +1307,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joeblau.$(PROJECT_NAME)";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1337,13 +1347,14 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1365,6 +1376,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joeblau.$(PROJECT_NAME)";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

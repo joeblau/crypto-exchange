@@ -19,7 +19,7 @@ public struct CoinbaseAPIEndpoints: APIEndpointable {
 
     // Authenticate
     public var oAuthAuthorize = "https://www.coinbase.com/oauth/authorize".toURL
-    public var oAuthToken = "http://www.coinbase.com/oauth/token".toURL
+    public var oAuthToken = "https://www.coinbase.com/oauth/token".toURL
 
     // Users
     public func showUser(userId: String) -> URL {

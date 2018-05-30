@@ -16,19 +16,16 @@ public enum Credentials {
 public struct KeyCredentials {
     public var apiKey: String
     public var secretKey: String
-
-    public init(apiKey: String, secretKey: String) {
-        self.apiKey = apiKey
-        self.secretKey = secretKey
-    }
 }
 
 public struct OAuthCredentials {
     public var clientId: String
     public var clientSecret: String
+    public var redirectURI: String
 
-    public init(clientId: String, clientSecret: String) {
+    public init(clientId: String, clientSecret: String, redirectURI: String) {
         self.clientId = clientId
         self.clientSecret = clientSecret
+        self.redirectURI = redirectURI
     }
 }

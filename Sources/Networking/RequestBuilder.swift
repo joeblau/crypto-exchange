@@ -11,7 +11,8 @@ public protocol RequestBuildable {
     func build(urlComponents: URLComponents?,
                httpMethod: HTTPMethod,
                requestEncoding: RequestEncoding?,
-               queryItems: [URLQueryItem]?) throws -> URLRequest
+               queryItems: [URLQueryItem]?,
+               headers: [(httpHeaderField: String, value: String)]?) throws -> URLRequest
 
     func execute(request: URLRequest,
                  queue: DispatchQueue,
@@ -63,16 +64,29 @@ public class RequestBuilder: RequestBuildable {
     public func build(urlComponents: URLComponents?,
                       httpMethod: HTTPMethod = .get,
                       requestEncoding: RequestEncoding? = nil,
-                      queryItems: [URLQueryItem]? = nil) throws -> URLRequest {
+                      queryItems: [URLQueryItem]? = nil,
+                      headers: [(httpHeaderField: String, value: String)]? = nil) throws -> URLRequest {
         var urlComponentsMutable = urlComponents
-        urlComponentsMutable?.queryItems = queryItems
+
+        if httpMethod == HTTPMethod.get {
+            urlComponentsMutable?.queryItems = queryItems
+        }
+
         guard let url = urlComponentsMutable?.url else { throw RequestError.invalidURL }
+
 
         var request = URLRequest(url: url,
                                  cachePolicy: .reloadIgnoringLocalCacheData,
                                  timeoutInterval: timeoutInterval)
         request.httpMethod = "\(httpMethod)"
 
+        if httpMethod == HTTPMethod.post {
+            request.httpBody = url.query?.data(using: .utf8)
+        }
+
+        headers?.forEach { (httpHeaderField: String, value: String) in
+            request.addValue(value, forHTTPHeaderField: httpHeaderField)
+        }
         if let requestEncoding = requestEncoding {
             request.addValue("\(requestEncoding)", forHTTPHeaderField: "Content-Type")
         }

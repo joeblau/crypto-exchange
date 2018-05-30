@@ -5,7 +5,7 @@
 //  Created by Joe Blau on 1/21/18.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for CryptoExchange.
 FOUNDATION_EXPORT double CryptoExchangeVersionNumber;

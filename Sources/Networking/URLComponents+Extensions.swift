@@ -16,7 +16,6 @@ extension URLComponents: OAuthAuthenticatable {
     public func authenticate(oAuthCredentials: OAuthCredentials) -> URL? {
         var urlComponents = self
         urlComponents.queryItems = [URLQueryItem(name: "client_id", value: oAuthCredentials.clientId),
-                                     URLQueryItem(name: "redirect_uri", value: "urn:ietf:wg:oauth:2.0:oob"),
                                      URLQueryItem(name: "response_type", value: "code"),
                                      URLQueryItem(name: "scope", value: "wallet:accounts:read")]
 
@@ -29,7 +28,7 @@ extension URLComponents: OAuthAuthenticatable {
                                      URLQueryItem(name: "code", value: code),
                                      URLQueryItem(name: "client_id", value: oAuthCredentials.clientId),
                                      URLQueryItem(name: "client_secret", value: oAuthCredentials.clientSecret),
-                                     URLQueryItem(name: "redirect_uri", value: "wallet:accounts:read")]
+                                     URLQueryItem(name: "redirect_uri", value: oAuthCredentials.redirectURI)]
 
         return urlComponents.url
     }
