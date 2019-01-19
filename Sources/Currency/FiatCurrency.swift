@@ -146,7 +146,7 @@ extension FiatCurrency: CustomStringConvertible, CustomDebugStringConvertible {
         case .bwp: return "Botswana Pula"
         case .byn: return "Belarus Ruble"
         case .bzd: return "Belize Dollar"
-        case .cad: return "Canadan Dollar"
+        case .cad: return "Canadian Dollar"
         case .chf: return "Switzerland Franc"
         case .clp: return "Chile Peso"
         case .cny: return "Chinese Yuan Renminbi"
